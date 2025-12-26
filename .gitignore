@@ -1,0 +1,17 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# cache
+cache
+
+# data
+*.csv
+*.xlsx
+*.txt
+*.docx
+JS_GL
+# manuscript and plots
+plots
+manuscript
