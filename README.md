@@ -17,7 +17,8 @@ This notebook processes and cleans data from MPT passive sampler field deploymen
 - **MD_CC**: Matthew Dunn — Cape Cod, Massachusetts  
 - **MD_WE**: Matthew Dunn — Westerly, Rhode Island  
 
-Instructions on where to locate the data for each study are provided in the README files within the corresponding subfolders. The associated compiled dataset is also available on Harvard Dataverse (link to be added).
+Instructions on where to locate the data for each study are provided in the README files within the corresponding subfolders. The associated compiled dataset is also available on Harvard Dataverse:
+ - Ganglbauer, J.; Dunn, M.; Snook, J.; Becanova, J.; & Lohmann, R. 2025. *PFAS Sampling Rates in Microporous Polyethylene Tube Samplers.* Harvard Dataverse. https://doi.org/10.7910/DVN/DAH1SO.
 
 The notebook generates two cleaned, compiled CSV files:
 - **grab_samples.csv** — PFAS concentrations measured in grab water samples  
