@@ -142,7 +142,7 @@ class PFAS_DATA:
     def plot_diffusion_coefficients(self) -> None:
         D_temperature = lambda D, T:  D * ((273.15 + T) / 298.15) * np.exp((1.37023 * (T - 25) + 0.000836 * (T - 25)**2)/(109 + T))
         for temperature_in_C in [5, 15, 25]:
-            fig, ax = plt.subplots()
+            fig, ax = plt.subplots(figsize=(10, 6))
             for (index, compound) in enumerate(self.pfas_data.index.tolist()):
                 [M, V, NC, functional_group, Kmw, Dm, Ksw, dKsw, Dw] = self.pfas_data.loc[compound,:]
                 # DW_Archie = D_temperature(3.3e-5 * 0.98**2 / M**(1/3), temperature_in_C)
@@ -161,7 +161,7 @@ class PFAS_DATA:
                 if temperature_in_C==25:
                     ax.scatter(x=index, y=Dw, s=10, edgecolors='k', label='Experimental')
                 if index==0:
-                    ax.legend(loc='center left', bbox_to_anchor=(1.0, 0.5))
+                    ax.legend(title='Diffusion Coefficient' + '\n' + 'Calculation Method', loc='center left', bbox_to_anchor=(1.0, 0.5))
             ax.set_ylabel('Diffusion coefficient [cm*cm/s]')
             ax.set_xticks([i for i in range(len(self.pfas_data.index.tolist()))])
             ax.set_xticklabels(self.pfas_data.index.tolist())
